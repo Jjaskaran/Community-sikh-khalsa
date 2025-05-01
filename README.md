@@ -6,7 +6,7 @@
     <title>Registration Details</title>
     <style>
        
-    button {
+   button {
       padding: 10px 20px;
       background-color: black;
       color: white;
@@ -15,16 +15,13 @@
       cursor: pointer;
     }
 
-    .result {
+.result {
       background: #e6ffe6;
       padding: 15px;
       border-radius: 10px;
       margin-top: 15px;
     }   
-       
-       
-       
-           .footer {
+ .footer {
       background-color: #002b5c;
       color: #fff;
       text-align: center;
@@ -32,11 +29,17 @@
       margin-top: 30px;
     }
        
+ .container {
+      
+ padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      max-width: 1000px;
+      margin: auto;
+    }
        
-       
-       
-         .container {
-      background-color: #fff;
+ .ss {
+      background-color: yellow;
       padding: 15px;
       border-radius: 10px;
       box-shadow: 0 0 10px #ccc;
@@ -44,37 +47,16 @@
       margin: auto;
     }
        
-       
-       
-       
+  .codes    {
            
-         .ss {
-      background-color: yellow;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #ccc;
-      max-width: 800px;
-      margin: auto;
-    }
-       
-       
-       
-       
-       
-       .codes    {
-           
-           border: 2px solid black;
+ border: 2px solid black;
             border-radius: 4px;
             outline: none;
             padding: 4px;
             color: black;
-            
-       }
+         }
        
-       
-       
-       
-        .sub {
+.sub {
             color: white;
             background: blue;
             padding: 10px 20px;
@@ -115,58 +97,57 @@
         .pass:focus {
             border: 2px solid red;
         }
-    </style>
+        
+ hr {
+  border: none;
+  border-top: 0px solid #ccc;
+  margin: 0px 0;
+}   
+ </style>
 </head>
-<body text="blue">
+<body text="blue">   
     <marquee bgcolor="yellow"><font color="RED"><b>WAHEGURU JI KA KHALSA WAHEGURU JI KI FATEH</b></font></marquee>
     <marquee scrolldelay="1" scrollamount="1">
         <font color="black"><b>ONLY FOR ADMIN PURPOSE USING SATURDAY AND SUNDAY AFFI. TO JASKARAN SINGH DEOL</b></font>
     </marquee>
     <hr><hr>
-    
-    
-    
-    
-    <div class="ss">
+       <div class="ss">
  
-    <h2>Online Transaction NetBanking</h2>
+  <h2>Online Transaction NetBanking</h2>
 
   <form id="bankForm">
    <font color="black"> <label for="fromAccount">From UPI No :</label>
     <input type="number" class="codes" id="fromAccount" required>
 
-    <label for="toAccount">To (A/C)or (UPI) No :</label>
+  <label for="toAccount">To (A/C)or (UPI) No :</label>
     <input type="number" class="codes" id="toAccount" required>
-
     <label for="fullName">From Name :</label>
     <input type="text" id="fullName" class="codes" required><br><br>
 
-    <label for="paymentType">Payment Type:</label>
+  <label for="paymentType">Payment Type:</label>
     <select id="paymentType" class="codes" required>
       <option value="Transfer(UPI)">Transfer(UPI)</option>
           </select>
 
-    <label for="amount">Pay Amount :</label>
+ <label for="amount">Pay Amount :</label>
     <input type="number" class="codes" id="amount" required>
 
-    <label for="date">Date:</label>
+  <label for="date">Date:</label>
     <input type="date" id="date" class="codes" required><br><br>
-
     <label for="paymentVia">Payment via:</label>
     <select id="paymentVia" class="codes" required>
       <option value="OAPS(UPI)">OAPS(UPI)</option>
       <option value="Debit Card">Debit Card</option>
     </select>
 
-    <label for="status">Status:</label>
+ <label for="status">Status:</label>
     <select id="status" class="codes" required>
       <option value="Pending">Pending</option>
      <option value=" Diclined ">Diclined</option>
      <option value="Verified">Verified</option>
     </select>   </font>  <br><br>
 
-   
-    <center><button type="submit">Proceed</button></center>
+  <center><button type="submit">Proceed</button></center>
   </form>
 
   <div class="search-section">
@@ -174,10 +155,10 @@
     <label for="searchAccountNumber">Enter Transaction ID :</label>
     <input type="text" class="codes" id="searchAccountNumber">
 
-    <label for="searchPassword">Password:</label>
-    <input type="password"  class="codes" id="searchPassword">
+ <label for="searchPassword">Password:</label>
+  <input type="password"  class="codes" id="searchPassword">
 
-    <button onclick="searchAccount()">Proceed</button>
+<button onclick="searchAccount()">Proceed</button>
   </div>
 
   <div id="accountResult" class="result" style="display: none;"></div>
@@ -187,32 +168,25 @@
     <label for="editName">Name:</label>
     <input type="text" class="codes" id="editName">
 
-    <label for="editAmount">Pay (INR) Amount):</label>
+ <label for="editAmount">Pay (INR) Amount):</label>
     <input type="number" class="codes" id="editAmount">
 
-    <label for="editStatus">Status:</label>
+  <label for="editStatus">Status:</label>
     <select id="editStatus"   class="codes">
       <option value="Pending">Pending</option>
       <option value="Verified">Verified</option>
     </select>
-
     <label for="editPassword">Password:</label>
     <input type="password" class="codes" id="editPassword" required>
 
-    <button onclick="saveChanges()">Save Changes</button>
+  <button onclick="saveChanges()">Save Changes</button>
   </div>
 
   <div>
     <h3>Show All Pending Transaction IDs</h3>
     <button onclick="showPendingAccounts()">Show Pending</button>
-    
-    </div>
-    
-    
-    <br> <br>  
-    <br>
-    
-    
+      </div>
+ <br> <br>   <br>
   </div>
 
   <div id="pendingResults" class="result" style="display: none;"></div>
@@ -359,18 +333,7 @@
 
       resultDiv.style.display = 'block';
     }
-  </script>
-  
-  
-  
-  
-  
-  
-  
-  
-  
- 
-    
+  </script>   
      
 <marquee bgcolor="red" scrolldelay="1" scrollamount="1">
     <font color="yellow"><b>ONLY FOR ADMIN PURPOSE USING SATURDAY AND SUNDAY AFFI. TO JASKARAN SINGH DEOL</b></font>
@@ -386,84 +349,71 @@
 <div class="container">
     <h3><u>CSK A/C or CODE SERVICES</u></h3>
     <br><br>
-
-    <form id="studentForm">
+ <form id="studentForm">
         <input type="hidden" id="editingRowIndex">
-
-        <label for="newCode"><b>CREATE NEW CODE:</b></label>
+  <label for="newCode"><b>CREATE NEW CODE:</b></label>
         <input type="number" id="newCode" class="code"> 
         <input type="button" value="Add Data" class="sub" onclick="addStudent()">
-        <br><hr><hr>
-
-        <br>
-        <br>
-        <br>
-
-        <label for="studentD"><b>CODE DATE:</b></label>
+        <br><hr><hr> <br>      <br>  <br>
+<label for="studentD"><b>CODE DATE:</b></label>
         <input type="text" id="studentD" class="code" required>
 
-        <label for="studentB"><b>A/C BALANCE :</b></label>
+  <label for="studentB"><b>A/C BALANCE :</b></label>
         <input type="number" id="studentB" class="code" required><br><br>
 
-        <label for="studentreg"><b>NAME :</b></label>
+ <label for="studentreg"><b>NAME :</b></label>
         <input type="text" id="studentreg" class="code" required>
 
-        <label for="studentrecipt"><b>VILLAGE :</b></label>
+<label for="studentrecipt"><b>VILLAGE :</b></label>
         <input type="text" id="studentrecipt" class="code" required>
 
-        <label for="studentstatus"><b>REG. ID:</b></label>
+  <label for="studentstatus"><b>REG. ID:</b></label>
         <input type="text" id="studentstatus" class="code"><br><br>
 
-        <label for="studentAdhaar"><b>ADHAAR SEEDING :</b></label>
+<label for="studentAdhaar"><b>ADHAAR SEEDING :</b></label>
         <input type="text" id="studentAdhaar" class="code" required>
 
-        <label for="studentPan"><b>PAN SEEDING :</b></label>
+   <label for="studentPan"><b>PAN SEEDING :</b></label>
         <input type="text" id="studentPan" class="code" required><br><br>
 
-        <label for="studentform"><b>UPI NO.:</b></label>
+ <label for="studentform"><b>UPI NO.:</b></label>
         <input type="number" id="studentform" class="code">
 
-        <label for="studentpay"><b>SCHOLARSHIP:</b></label>
+  <label for="studentpay"><b>SCHOLARSHIP:</b></label>
         <select id="studentpay" class="code">
             <option value="NO">NO</option>
             <option value="YES">YES</option>
         </select><br><br>
 
-        <label for="studentTD"><b>SIGNED VALID TILL :</b></label>
+ <label for="studentTD"><b>SIGNED VALID TILL :</b></label>
         <input type="text" id="studentTD" class="code" required>
 
-        <label for="studentsign"><b>STATUS:</b></label>
+  <label for="studentsign"><b>STATUS:</b></label>
         <select id="studentsign" class="code">
             <option value="ACTIVE">ACTIVE</option>
             <option value="DEACTIVE">DEACTIVE</option>
         </select><br><br>
 
-        <label for="studenttype"><b>TODAY DATE :</b></label>
+  <label for="studenttype"><b>TODAY DATE :</b></label>
         <input type="date" id="studenttype" class="code" required>
         <br><br><br>
-
-    
-
-        <br>
-        <center>
-            <font color="red">* 
+<center>
+            <font color="red">*
             <label for="studentID"><b>ENTER A/C  CODE:</b></label> </font>
             <input type="number" id="studentID" class="code" required> 
         </center>
         <br>
-
-
-    <center>
+        <center>
             <font color="red">*</font>  
             <label for="password"><font color="red"><b>ENTER PASSWORD:</b></font></label>
             <input type="password" id="password" class="pass" required>
         </center><br><br>
-
-        <center>
+ <center>
             <input type="button" value="Search Data" class="sub" onclick="searchStudent()">
             <input type="button" value="Save Changes" id="saveButton" class="sub" style="display:none;" onclick="saveEditedStudent()">
-        </center>
-    </form>
+            
+<input type="button" value="Reset Password" class="sub" onclick="resetPassword()">                 
+        </center>    </form>
 </div>
 
 <br>
@@ -493,407 +443,377 @@
 <div id="transactionHistory" style="margin-top:20px;"></div>
 
 <script>
-    let editIndex = null;
 
-    function addStudent() {
-        let password = document.getElementById("password").value.trim();
-        if (password !== 'Q02') {
-            alert("Incorrect password. Cannot add data.");
-            return;
+// Initial Setup
+if (!localStorage.getItem("adminPassword")) {
+    localStorage.setItem("adminPassword", "Q02");
+}
+
+let editIndex = null; // Declare this globally
+
+// Add Student
+function addStudent() {
+    let password = document.getElementById("password").value.trim();
+    if (password !== localStorage.getItem("adminPassword")) {
+        alert("Incorrect password.");
+        return;
+    }
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+    let newStudent = {
+        studentID: document.getElementById("studentID").value.trim(),
+        studentreg: document.getElementById("studentreg").value.trim(),
+        studentD: document.getElementById("studentD").value.trim(),
+        studentrecipt: document.getElementById("studentrecipt").value.trim(),
+        studentpay: document.getElementById("studentpay").value.trim(),
+        studentTD: document.getElementById("studentTD").value.trim(),
+        studentstatus: document.getElementById("studentstatus").value.trim(),
+        studentform: document.getElementById("studentform").value.trim(),
+        studentAdhaar: document.getElementById("studentAdhaar").value.trim(),
+        studentPan: document.getElementById("studentPan").value.trim(),
+        studentB: parseFloat(document.getElementById("studentB").value.trim()),
+        studenttype: document.getElementById("studenttype").value.trim(),
+        studentsign: document.getElementById("studentsign").value.trim(),
+        history: []
+    };
+    students.push(newStudent);
+    localStorage.setItem("students", JSON.stringify(students));
+    alert("Data added successfully!");
+    document.getElementById("studentForm").reset();
+    searchStudent();
+}
+
+// Search Student
+function searchStudent() {
+    let searchID = document.getElementById("studentID").value.trim();
+    let password = document.getElementById("password").value.trim();
+    if (!searchID) {
+        alert("Enter Code.");
+        return;
+    }
+    if (password !== localStorage.getItem("adminPassword")) {
+        alert("Incorrect password.");
+        return;
+    }
+
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+    let tableBody = document.getElementById("feesTable").getElementsByTagName('tbody')[0];
+    tableBody.innerHTML = "";
+
+    let found = false;
+    students.forEach((student, index) => {
+        if (student.studentID === searchID) {
+            found = true;
+            let row = tableBody.insertRow();
+            Object.entries(student).forEach(([key, value]) => {
+                let cell = row.insertCell();
+                if (key === "studentB") {
+                    cell.innerHTML = `<span style="color:green;">₹${value}</span>`;
+                } else if (key === "studentTD") {
+                    cell.innerHTML = `<span style="color:red;">${value}</span>`;
+                } else if (key === "studentAdhaar") {
+                    cell.innerHTML = `<span style="color:green;">${value}</span>`;
+                } else {
+                    cell.textContent = value;
+                }
+            });
+            let actionsCell = row.insertCell();
+            actionsCell.innerHTML = `
+                <button onclick="editStudent(${index})">Edit</button>
+                <button onclick="deleteStudent(${index})">Delete</button>
+                <button onclick="transferMoney(${index})">Transfer</button>
+                <button onclick="depositMoney(${index})">Deposit</button>
+                <button onclick="withdrawMoney(${index})">Withdraw</button>
+                <button onclick="showHistory('${student.studentID}')">History</button>`;
         }
+    });
+    if (!found) {
+        alert("Code not found.");
+    }
+}
 
-        let newCode = document.getElementById("studentID").value.trim();
-        let students = JSON.parse(localStorage.getItem("students")) || [];
-        if (students.some(student => student.studentID === newCode)) {
-            alert("This code already exists! Use Edit to modify it.");
-            return;
-        }
+// Edit Student
+function editStudent(index) {
+    let password = prompt("Enter password to edit:");
+    if (password !== localStorage.getItem("adminPassword")) {
+        alert("Incorrect password.");
+        return;
+    }
 
-        let studentData = {
-            studentID: newCode,
-            studentreg: document.getElementById("studentreg").value.trim(),
-            studentD: document.getElementById("studentD").value.trim(),
-            studentrecipt: document.getElementById("studentrecipt").value.trim(),
-            studentpay: document.getElementById("studentpay").value.trim(),
-            studentTD: document.getElementById("studentTD").value.trim(),
-            studentstatus: document.getElementById("studentstatus").value,
-            studentform: document.getElementById("studentform").value.trim(),
-            studentAdhaar: document.getElementById("studentAdhaar").value.trim(),
-            studentPan: document.getElementById("studentPan").value.trim(),
-            studentB: document.getElementById("studentB").value.trim(),
-            studenttype: document.getElementById("studenttype").value,
-            studentsign: document.getElementById("studentsign").value
-        };
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+    let student = students[index];
 
-        students.push(studentData);
+    document.getElementById("studentID").value = student.studentID;
+    document.getElementById("studentreg").value = student.studentreg;
+    document.getElementById("studentD").value = student.studentD;
+    document.getElementById("studentrecipt").value = student.studentrecipt;
+    document.getElementById("studentpay").value = student.studentpay;
+    document.getElementById("studentTD").value = student.studentTD;
+    document.getElementById("studentstatus").value = student.studentstatus;
+    document.getElementById("studentform").value = student.studentform;
+    document.getElementById("studentAdhaar").value = student.studentAdhaar;
+    document.getElementById("studentPan").value = student.studentPan;
+    document.getElementById("studentB").value = student.studentB;
+    document.getElementById("studenttype").value = student.studenttype;
+    document.getElementById("studentsign").value = student.studentsign;
+
+    editIndex = index;
+    document.getElementById("saveButton").style.display = "inline-block";
+}
+
+// Save Edited Student
+function saveEditedStudent() {
+    let password = document.getElementById("password").value.trim();
+    if (password !== localStorage.getItem("adminPassword")) {
+        alert("Incorrect password. Cannot save changes.");
+        return;
+    }
+
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+    let updatedStudent = {
+        studentID: document.getElementById("studentID").value.trim(),
+        studentreg: document.getElementById("studentreg").value.trim(),
+        studentD: document.getElementById("studentD").value.trim(),
+        studentrecipt: document.getElementById("studentrecipt").value.trim(),
+        studentpay: document.getElementById("studentpay").value.trim(),
+        studentTD: document.getElementById("studentTD").value.trim(),
+        studentstatus: document.getElementById("studentstatus").value.trim(),
+        studentform: document.getElementById("studentform").value.trim(),
+        studentAdhaar: document.getElementById("studentAdhaar").value.trim(),
+        studentPan: document.getElementById("studentPan").value.trim(),
+        studentB: parseFloat(document.getElementById("studentB").value.trim()),
+        studenttype: document.getElementById("studenttype").value.trim(),
+        studentsign: document.getElementById("studentsign").value.trim()
+    };
+
+    if (editIndex !== null) {
+        students[editIndex] = updatedStudent;
         localStorage.setItem("students", JSON.stringify(students));
+        alert("Changes saved successfully!");
         document.getElementById("studentForm").reset();
-        alert("New data successfully added!");
+        document.getElementById("saveButton").style.display = "none";
+        editIndex = null;
         searchStudent();
+    } else {
+        alert("No student selected for editing.");
+    }
+}
+
+// Delete Student
+function deleteStudent(index) {
+    let password = prompt("Enter password to delete:");
+    if (password !== localStorage.getItem("adminPassword")) {
+        alert("Incorrect password.");
+        return;
+    }
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+    students.splice(index, 1);
+    localStorage.setItem("students", JSON.stringify(students));
+    searchStudent();
+}
+
+// Transfer Money
+function transferMoney(index) {
+    let password = prompt("Enter password for transfer:");
+    if (password !== localStorage.getItem("adminPassword")) {
+        alert("Incorrect password.");
+        return;
     }
 
-    function searchStudent() {
-        let searchID = document.getElementById("studentID").value.trim();
-        let password = document.getElementById("password").value.trim();
-        if (!searchID) {
-            alert("Enter a code to search.");
-            return;
-        }
-        if (password !== 'Q02') {
-            alert("Incorrect password.");
-            return;
-        }
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+    let sender = students[index];
+    let amount = parseFloat(prompt(`Current Balance: ₹${sender.studentB}\nEnter amount to transfer:`));
 
-        let students = JSON.parse(localStorage.getItem("students")) || [];
-        let tableBody = document.getElementById("feesTable").getElementsByTagName('tbody')[0];
-        tableBody.innerHTML = "";
-
-        let found = false;
-        students.forEach((student, index) => {
-            if (student.studentID === searchID) {
-                found = true;
-                let row = tableBody.insertRow();
-                Object.entries(student).forEach(([key, value]) => {
-                    let cell = row.insertCell();
-                    if (key === "studentB") {
-                        cell.innerHTML = `<span style="color:green;">₹${value}</span>`;
-                    } else if (key === "studentTD") {
-                        cell.innerHTML = `<span style="color:red;">${value}</span>`;
-                    } else if (key === "studentAdhaar") {
-                        cell.innerHTML = `<span style="color:green;">${value}</span>`;
-                    } else {
-                        cell.textContent = value;
-                    }
-                });
-                let actionsCell = row.insertCell();
-                actionsCell.innerHTML = `
-                    <button onclick="editStudent(${index})">Edit</button>
-                    <button onclick="deleteStudent(${index})">Delete</button>
-                    <button onclick="transferMoney(${index})">Transfer</button>
-                    <button onclick="depositMoney(${index})">Deposit</button>
-                    <button onclick="withdrawMoney(${index})">Withdraw</button>
-                    <button onclick="showHistory('${student.studentID}')">History</button>`;
-            }
-        });
-        if (!found) {
-            alert("Code not found.");
-        }
+    if (isNaN(amount) || amount <= 0) {
+        alert("Invalid amount.");
+        return;
     }
 
-    function editStudent(index) {
-        let password = prompt("Enter password to edit:");
-        if (password !== 'Q02') {
-            alert("Incorrect password.");
-            return;
-        }
-
-        let students = JSON.parse(localStorage.getItem("students")) || [];
-        let student = students[index];
-
-        document.getElementById("studentID").value = student.studentID;
-        document.getElementById("studentreg").value = student.studentreg;
-        document.getElementById("studentD").value = student.studentD;
-        document.getElementById("studentrecipt").value = student.studentrecipt;
-        document.getElementById("studentpay").value = student.studentpay;
-        document.getElementById("studentTD").value = student.studentTD;
-        document.getElementById("studentstatus").value = student.studentstatus;
-        document.getElementById("studentform").value = student.studentform;
-        document.getElementById("studentAdhaar").value = student.studentAdhaar;
-        document.getElementById("studentPan").value = student.studentPan;
-        document.getElementById("studentB").value = student.studentB;
-        document.getElementById("studenttype").value = student.studenttype;
-        document.getElementById("studentsign").value = student.studentsign;
-
-        editIndex = index;
-        document.getElementById("saveButton").style.display = "inline-block";
+    if (amount > sender.studentB) {
+        alert("Insufficient Balance.");
+        return;
     }
 
-    function saveEditedStudent() {
-        let password = document.getElementById("password").value.trim();
-        if (password !== 'Q02') {
-            alert("Incorrect password. Cannot save changes.");
-            return;
-        }
+    let recipientCode = prompt("Enter the recipient's CODE:");
+    let recipient = students.find(student => student.studentID === recipientCode);
 
-        let students = JSON.parse(localStorage.getItem("students")) || [];
-        let updatedStudent = {
-            studentID: document.getElementById("studentID").value.trim(),
-            studentreg: document.getElementById("studentreg").value.trim(),
-            studentD: document.getElementById("studentD").value.trim(),
-            studentrecipt: document.getElementById("studentrecipt").value.trim(),
-            studentpay: document.getElementById("studentpay").value.trim(),
-            studentTD: document.getElementById("studentTD").value.trim(),
-            studentstatus: document.getElementById("studentstatus").value,
-            studentform: document.getElementById("studentform").value.trim(),
-            studentAdhaar: document.getElementById("studentAdhaar").value.trim(),
-            studentPan: document.getElementById("studentPan").value.trim(),
-            studentB: document.getElementById("studentB").value.trim(),
-            studenttype: document.getElementById("studenttype").value,
-            studentsign: document.getElementById("studentsign").value
-        };
-
-        if (editIndex !== null) {
-            students[editIndex] = updatedStudent;
-            localStorage.setItem("students", JSON.stringify(students));
-            alert("Changes saved successfully!");
-            document.getElementById("studentForm").reset();
-            document.getElementById("saveButton").style.display = "none";
-            editIndex = null;
-            searchStudent();
-        } else {
-            alert("No student selected for editing.");
-        }
+    if (!recipient) {
+        alert("Recipient code not found.");
+        return;
     }
 
-    function deleteStudent(index) {
-        let password = prompt("Enter password to delete:");
-        if (password !== 'Q02') {
-            alert("Incorrect password.");
-            return;
-        }
-        let students = JSON.parse(localStorage.getItem("students")) || [];
-        students.splice(index, 1);
-        localStorage.setItem("students", JSON.stringify(students));
-        searchStudent();
+    let transactionId = prompt("Enter Transaction ID:");
+    sender.studentB = (sender.studentB - amount).toFixed(2);
+    recipient.studentB = (parseFloat(recipient.studentB) + amount).toFixed(2);
+
+    localStorage.setItem("students", JSON.stringify(students));
+
+    let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+    transactions.push({
+        transactionId: transactionId,
+        sender: sender.studentID,
+        recipient: recipient.studentID,
+        amount: amount,
+        date: new Date().toLocaleString(),
+        senderBalance: sender.studentB,
+        recipientBalance: recipient.studentB,
+        type: "transfer"
+    });
+    localStorage.setItem("transactions", JSON.stringify(transactions));
+
+    alert(`₹${amount} transferred successfully!`);
+    searchStudent();
+}
+
+// Deposit Money
+function depositMoney(index) {
+    let password = prompt("Enter password to deposit:");
+    if (password !== localStorage.getItem("adminPassword")) {
+        alert("Incorrect password.");
+        return;
     }
 
- 
- 
- 
- 
- 
- 
-    function transferMoney(index) {
-        let password = prompt("Enter password for transfer:");
-        if (password !== 'Q02') {
-            alert("Incorrect password.");
-            return;
-        }
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+    let student = students[index];
+    let amount = parseFloat(prompt("Enter amount to deposit:"));
 
-        let students = JSON.parse(localStorage.getItem("students")) || [];
-        let sender = students[index];
-        let amount = prompt(`Current Balance: ₹${sender.studentB}\nEnter amount to transfer:`);
-
-        if (!amount || isNaN(amount) || Number(amount) <= 0) {
-            alert("Invalid amount.");
-            return;
-        }
-
-        amount = Number(amount);
-        if (amount > Number(sender.studentB)) {
-            alert("Insufficient Balance.");
-            return;
-        }
-
-        let recipientCode = prompt("Enter the recipient's CODE:");
-        let recipient = students.find(student => student.studentID === recipientCode);
-
-        if (!recipient) {
-            alert("Recipient code not found.");
-            return;
-        }
-
-        let transactionId = prompt("Enter Transaction ID:");
-        sender.studentB = (Number(sender.studentB) - amount).toFixed(2);
-        recipient.studentB = (Number(recipient.studentB) + amount).toFixed(2);
-
-        localStorage.setItem("students", JSON.stringify(students));
-
-        let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
-        transactions.push({
-            transactionId: transactionId,
-            sender: sender.studentID,
-            recipient: recipient.studentID,
-            amount: amount,
-            date: new Date().toLocaleString(),
-            senderBalance: sender.studentB,
-            recipientBalance: recipient.studentB,
-            type: "transfer"
-        });
-        localStorage.setItem("transactions", JSON.stringify(transactions));
-
-        alert(`₹${amount} transferred successfully!`);
-        searchStudent();
+    if (isNaN(amount) || amount <= 0) {
+        alert("Invalid amount.");
+        return;
     }
 
- 
- 
- 
- 
- 
- 
- 
- 
-    function depositMoney(index) {
-        let password = prompt("Enter password to deposit:");
-        if (password !== 'Q02') {
-            alert("Incorrect password.");
-            return;
-        }
-
-        let students = JSON.parse(localStorage.getItem("students")) || [];
-        let student = students[index];
-        let amount = prompt("Enter amount to deposit:");
-        if (!amount || isNaN(amount) || Number(amount) <= 0) {
-            alert("Invalid amount.");
-            return;
-        }
-        amount = Number(amount);
-        student.studentB = (Number(student.studentB) + amount).toFixed(2);
-        localStorage.setItem("students", JSON.stringify(students));
-
-
-
-
-
+    student.studentB = (parseFloat(student.studentB) + amount).toFixed(2);
+    localStorage.setItem("students", JSON.stringify(students));
 
     let checkId = prompt("Enter Check Number:");
-  
 
+    let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+    transactions.push({
+        transactionId: checkId,
+        sender: "CASH",
+        recipient: student.studentID,
+        amount: amount,
+        date: new Date().toLocaleString(),
+        recipientBalance: student.studentB,
+        type: "deposit"
+    });
+    localStorage.setItem("transactions", JSON.stringify(transactions));
 
+    alert(`₹${amount} deposited successfully!`);
+    searchStudent();
+}
 
-
-        let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
-        transactions.push({
-            transactionId: checkId,
-            sender: "CASH",
-            recipient: student.studentID,
-            amount: amount,
-            date: new Date().toLocaleString(),
-            recipientBalance: student.studentB,
-            type: "deposit"
-        });
-        localStorage.setItem("transactions", JSON.stringify(transactions));
-
-        alert(`₹${amount} deposited successfully!`);
-        searchStudent();
+// Withdraw Money
+function withdrawMoney(index) {
+    let password = prompt("Enter password to withdraw:");
+    if (password !== localStorage.getItem("adminPassword")) {
+        alert("Incorrect password.");
+        return;
     }
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    function withdrawMoney(index) {
-        let password = prompt("Enter password to withdraw:");
-        if (password !== 'Q02') {
-            alert("Incorrect password.");
-            return;
-        }
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+    let student = students[index];
+    let amount = parseFloat(prompt("Enter amount to withdraw:"));
 
-        let students = JSON.parse(localStorage.getItem("students")) || [];
-        let student = students[index];
-        let amount = prompt("Enter amount to withdraw:");
-        if (!amount || isNaN(amount) || Number(amount) <= 0) {
-            alert("Invalid amount.");
-            return;
-        }
-        amount = Number(amount);
-        if (amount > Number(student.studentB)) {
-            alert("Insufficient Balance.");
-            return;
-        }
-        student.studentB = (Number(student.studentB) - amount).toFixed(2);
-        localStorage.setItem("students", JSON.stringify(students));
-
-     
-     
-      let chckId = prompt("Enter Check Number:");
-  
-     
-     
-     
-        let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
-        transactions.push({
-            transactionId: chckId,
-            sender: student.studentID,
-            recipient: "CASH",
-            amount: amount,
-            date: new Date().toLocaleString(),
-            senderBalance: student.studentB,
-            type: "withdraw"
-        });
-        localStorage.setItem("transactions", JSON.stringify(transactions));
-
-        alert(`₹${amount} withdrawn successfully!`);
-        searchStudent();
+    if (isNaN(amount) || amount <= 0 || amount > parseFloat(student.studentB)) {
+        alert("Invalid or insufficient amount.");
+        return;
     }
 
+    student.studentB = (parseFloat(student.studentB) - amount).toFixed(2);
+    localStorage.setItem("students", JSON.stringify(students));
 
+    let checkId = prompt("Enter Check Number:");
 
+    let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+    transactions.push({
+        transactionId: checkId,
+        sender: student.studentID,
+        recipient: "CASH",
+        amount: amount,
+        date: new Date().toLocaleString(),
+        senderBalance: student.studentB,
+        type: "withdraw"
+    });
+    localStorage.setItem("transactions", JSON.stringify(transactions));
 
+    alert(`₹${amount} withdrawn successfully!`);
+    searchStudent();
+}
 
-
-
-
-    function showHistory(code) {
-        let password = prompt("Enter password to view history:");
-        if (password !== 'Q02') {
-            alert("Incorrect password.");
-            return;
-        }
-
-        let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
-        let history = transactions.filter(t => t.sender === code || t.recipient === code);
-        let historyDiv = document.getElementById("transactionHistory");
-
-        if (history.length === 0) {
-            historyDiv.innerHTML = `<h3>No transaction history for Code ${code}.</h3>`;
-        } else {
-            let html = `<h3>Transaction History for Code ${code}:</h3>
-            <table border="1">
-                <tr><th>Transaction ID</th><th>Type</th><th>Amount</th><th>A/C or UPI</th><th>Date</th><th>Available Balance</th></tr>`;
-            history.forEach(t => {
-                let type, amount, balance;
-                if (t.type === "deposit") {
-                    type = 'Deposit';
-                    amount = `+₹${t.amount}`;
-                    balance = t.recipientBalance;
-                } else if (t.type === "withdraw") {
-                    type = 'Withdraw';
-                    amount = `-₹${t.amount}`;
-                    balance = t.senderBalance;
-                } else {
-                    type = t.sender === code ? 'Debit' : 'Credit';
-                    let color = t.sender === code ? 'red' : 'green';
-                let sign = t.sender === code ? '-' : '+';
-                    amount = t.sender === code ? `-₹${t.amount}` : `+₹${t.amount}`;
-                    balance = t.sender === code ? t.senderBalance : t.recipientBalance;
-                }
-                
-                
-             let color = t.sender === code ? 'red' : 'green';
-                let sign = t.sender === code ? '-' : '+';
-            
-                
-                
-                
-                
-               
-                
-                html += `<tr>
-                    <td>${t.transactionId}</td>
-                    <td style="color:${color};">${type}</td>
-                    <td style="color:${color};">${sign}₹${t.amount}</td>
-                    <td>${t.sender === code ? t.recipient : t.sender}</td>
-                    <td>${t.date}</td>
-                    <td>₹${balance}</td>
-                </tr>`;
-            });
-            html += `</table>`;
-            historyDiv.innerHTML = html;
-        }
+// Show Transaction History
+function showHistory(code) {
+    let password = prompt("Enter password to view history:");
+    if (password !== localStorage.getItem("adminPassword")) {
+        alert("Incorrect password.");
+        return;
     }
-</script>
-  
-  
-  
-  
-  
-  
+
+    let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+    let historyDiv = document.getElementById("transactionHistory");
+
+    if (!historyDiv) {
+        alert("History div not found! Make sure you have <div id='transactionHistory'></div> in your HTML.");
+        return;
+    }
+
+    let history = transactions.filter(t => t.sender === code || t.recipient === code);
+
+    if (history.length === 0) {
+        historyDiv.innerHTML = `<h3>No transaction history for Code: <span style="color:blue;">${code}</span></h3>`;
+        return;
+    }
+
+    let html = `<h3>Transaction History for <span style="color:blue;">${code}</span>:</h3>
+    <table border="1" cellpadding="5" cellspacing="0" style="border-collapse:collapse; width:100%;">
+        <thead>
+            <tr style="background:#f2f2f2;">
+                <th>Transaction ID</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>A/C or UPI </th>
+                <th>Date</th>
+                <th>Available Balance</th>
+            </tr>
+        </thead><tbody>`;
+
+    history.forEach(t => {
+        let isSender = t.sender === code;
+        let amount = (isSender ? "-" : "+") + "₹" + parseFloat(t.amount).toFixed(2);
+        let balance = isSender ? t.senderBalance : t.recipientBalance;
+        let type = t.type === "deposit" ? "Deposit" : t.type === "withdraw" ? "Withdraw" : (isSender ? "Debit" : "Credit");
+        let color = (isSender && t.type !== "deposit") || t.type === "withdraw" ? "red" : "green";
+        let otherParty = isSender ? t.recipient : t.sender;
+
+        html += `<tr>
+            <td>${t.transactionId}</td>
+            <td style="color:${color};">${type}</td>
+            <td style="color:${color};">${amount}</td>
+            <td>${otherParty}</td>
+            <td>${t.date}</td>
+            <td>₹${balance}</td>
+        </tr>`;
+    });
+
+    html += `</tbody></table>`;
+
+    historyDiv.innerHTML = html;
+}
+
+// Reset Password
+function resetPassword() {
+    let userId = prompt("Enter User ID to reset password:");
+    if (userId === "JASK9781") {
+        let newPass = prompt("Enter New Password:");
+        if (newPass) {
+            localStorage.setItem("adminPassword", newPass.trim());
+            alert("Password reset successful!");
+        }
+    } else {
+        alert("Wrong User ID.");
+        
+    }
+}
+
+</script>  
 </body>
 </html>
