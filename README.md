@@ -7,7 +7,7 @@
     <style>
        
     
-   .upload-box {
+        .upload-box {
             position: absolute;
             top: 20px;
             left: 20px;
@@ -20,7 +20,7 @@
  
  body {
  
-  transition: background-image 0.5s ease-in-out;
+    transition: background-image 0.5s ease-in-out;
     margin: 0;
     padding: 0;
    font-family: 'Nunito', sans-serif;
@@ -30,13 +30,13 @@
     
     
     
-   border-radius: 10px;
+    border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     padding: 15px;
     margin: 20px;
   }
  
-   button {
+    button {
       padding: 10px 20px;
       background-color: black;
       color: white;
@@ -45,14 +45,15 @@
       cursor: pointer;
     }
 
-  .result {
+    .result {
       background: #e6ffe6;
       padding: 15px;
       border-radius: 10px;
       margin-top: 15px;
     }   
        
-  .footer {
+       
+       .footer {
     background-color: #f1f1f1;
     text-align: center;
     font-weight: bold;
@@ -72,9 +73,10 @@
        
        
        
-  .container {
+       
+         .container {
       
-  padding: 20px;
+      padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px #ccc;
       max-width: 1000px;
@@ -85,7 +87,7 @@
        
        
            
-   .ss {
+         .ss {
       background-color: yellow;
       padding: 15px;
       border-radius: 10px;
@@ -98,25 +100,27 @@
        
        
        
-   .codes    {
-               border: 2px solid black;
+       .codes    {
+           
+           border: 2px solid black;
             border-radius: 4px;
             outline: none;
             padding: 4px;
             color: black;
             
-   }
+       }
        
        
-.cods    {
+          .cods    {
            
-   border: 2px solid black;
+           border: 2px solid black;
             border-radius: 7px;
             outline: none;
             padding: 8px;
             color: black;
             
-   }   
+       }   
+       
         .sub {
             color: white;
             background: blue;
@@ -147,30 +151,38 @@
         }
      
      
+
      
- .code {
+     
+     
+        .code {
             border: 2px solid black;
             border-radius: 5px;
             outline: none;
             padding: 5px;
             color: black;
         }
-        .pass {
+        
+            .pass {
             border: 3px solid black;
             border-radius: 7px;
             outline: none;
             padding: 8px;
             color: black;
         }
+        
         .code:focus {
             border: 2px solid blue;
         }
         .pass:focus {
             border: 3px solid red;
         }
+        
+        
+        
       .menu-container {
       
-background-color: white;
+      background-color: white;
     position: relative;
     text-align: right;
   }
@@ -211,7 +223,7 @@ background-color: white;
            
         
       
-   .spinner {
+        .spinner {
   border: 8px solid #f3f3f3;
   border-top: 8px solid blue;
   border-radius: 50%;
@@ -257,7 +269,7 @@ background-color: white;
 }
 
   
-   </style>
+    </style>
 </head>
 <body text="blue">
     
@@ -276,19 +288,22 @@ background-color: white;
 <div class="menu-container">
   <div class="dots" onclick="toggleMenu()">⋮</div>
   <div id="menuOptions" class="menu-options">
-        <div onclick="showNewStudentForm()">Create New A/c</div>
+      
+    <div onclick="showNewStudentForm()">Create New A/c</div>
     
   
     
-   <div onclick="transferACM()">Transfer(NEFT)</div>
+    <div onclick="transferACM()">Transfer(NEFT)</div>
     
-   <div onclick="Application()">Application</div> 
+    <div onclick="Application()">Application</div> 
    
-   <div onclick="transactionSearchWithId()">Transaction Status</div>
-        <div onclick="ASTATUS()">Application Status</div>    
-        <div onclick="knowyourAC()">Know your A/c with Adhaar</div>
+    <div onclick="transactionSearchWithId()">Transaction Status</div>
     
-   <div onclick="alert('Registration : 40/-  \n Application : 20/-  \n Transfer : 0/- \n Mini Bal limit for non UPI A/C: 200/-  \n Mini Bal Limit for UPI A/C : 500/-')">Charges</div>
+    <div onclick="ASTATUS()">Application Status</div>    
+    
+    <div onclick="knowyourAC()">Know your A/c with Adhaar</div>
+    
+    <div onclick="alert('Registration : 40/-  \n Application : 20/-  \n Transfer : 0/- \n Mini Bal limit for non UPI A/C: 200/-  \n Mini Bal Limit for UPI A/C : 500/-')">Charges</div>
     
   <div onclick="REGEX()">Registration</div> 
 
@@ -301,9 +316,10 @@ background-color: white;
  
  
 <div onclick="creditInterestToAll()">Credit Interest</div>
-        <div onclick="resetPassword()">Reset Password</div>
+        
+    <div onclick="resetPassword()">Reset Password</div>
   
-   <div onclick="back()">Style Background</div>
+    <div onclick="back()">Style Background</div>
     
  
   
@@ -323,6 +339,9 @@ background-color: white;
 
 <div id="transactionSearchWithIdd" style="display:none;">
     <!-- SEARCH TRANSACTION ID -->
+
+
+
     <form id="studentForm">
         <input type="hidden" id="editingRowIndex">
 <h3>Search Transaction by ID</h3>
@@ -335,38 +354,45 @@ background-color: white;
 
 
        
-   <div id="newStudentFormContainer" style="display:none;">
+     <div id="newStudentFormContainer" style="display:none;">
     <!-- START OF NEW STUDENT FORM -->
     <center><b><h2><font color= black>New Student A/c</font></h2></b></center>
-      <!-- All your form fields like CREATE CODE, DATE, BALANCE, etc. -->
+    
+    <!-- All your form fields like CREATE CODE, DATE, BALANCE, etc. -->
     <!-- ... keep as is ... -->
       
       
- <label for="newCode"><b>CREATE NEW CODE:</b></label>
+      
+        <label for="newCode"><b>CREATE NEW CODE:</b></label>
         <input type="number" id="newCode" class="code"> 
         <input type="button" value="Add Data" class="sub" onclick="addStudent()">
         <br><hr>
-    <br>
 
-   <label for="studentD"><b>CODE DATE:</b></label>
+        
+        <br>
+
+        <label for="studentD"><b>CODE DATE:</b></label>
         <input type="text" id="studentD" class="code" required>
-    <label for="studentB"><b>A/C BALANCE :</b></label>
+
+        <label for="studentB"><b>A/C BALANCE :</b></label>
         <input type="number" id="studentB" class="code" required><br><br>
-    <label for="studentreg"><b>NAME :</b></label>
+
+        <label for="studentreg"><b>NAME :</b></label>
         <input type="text" id="studentreg" class="code" required>
 
-   <label for="studentrecipt"><b>VILLAGE :</b></label>
+        <label for="studentrecipt"><b>VILLAGE :</b></label>
         <input type="text" id="studentrecipt" class="code" required>
-     <label for="studentstatus"><b>REG. ID:</b></label>
+
+        <label for="studentstatus"><b>REG. ID:</b></label>
         <input type="text" id="studentstatus" class="code"><br><br>
 
-   <label for="studentAdhaar"><b>ADHAAR SEEDING :</b></label>
+        <label for="studentAdhaar"><b>ADHAAR SEEDING :</b></label>
         <input type="text" id="studentAdhaar" class="code" required>
 
-   <label for="studentPan"><b>SMS ALERTS! :</b></label>
+        <label for="studentPan"><b>SMS ALERTS! :</b></label>
 <div class="toggle-group">
   
-   <select id="studentPan" class="code">
+    <select id="studentPan" class="code">
             <option value="ENABLE">Enable</option>
             <option value="DISABLE">Disable</option>
         </select>
@@ -375,24 +401,29 @@ background-color: white;
     
 <br><br>
 
-   <label for="studentform"><b>UPI NO.:</b></label>
-        <input type="number" id="studentform" class="code">    <label for="studentpay"><b>SCHOLARSHIP:</b></label>
+        <label for="studentform"><b>UPI NO.:</b></label>
+        <input type="number" id="studentform" class="code">
+
+    <label for="studentpay"><b>SCHOLARSHIP:</b></label>
     <input type="text" id="studentpay" class="code">
          <br><br>
-     <label for="studentTD"><b>SIGNED VALID TILL :</b></label>
+
+        <label for="studentTD"><b>SIGNED VALID TILL :</b></label>
         <input type="date" id="studentTD" class="code" required>
 
-   <label for="studentsign"><b>A/C TYPE:</b></label>
+        <label for="studentsign"><b>A/C TYPE:</b></label>
         <select id="studentsign" class="code">
         <option value="SB(NON-UPI)">SB(NON-UPI)</option>
             <option value="SB(UPI)">SB(UPI)</option>
             <option value="BSBD">SB TINY(BSBD)</option>
-                </select><br><br>
-      <label for="studenttype"><b>TODAY DATE :</b></label>
+            
+        </select><br><br>
+
+        <label for="studenttype"><b>TODAY DATE :</b></label>
         <input type="date" id="studenttype" class="code" required>
         <br><br>
         
-  </div>
+        </div>
         
 <hr>
 
@@ -416,28 +447,31 @@ background-color: white;
    <h3> <font color="blue">  <b><center><u>TRANSFER (NEFT/UPI)</center></u></b></font></h3>
    
    <font color="blue"><b>* Money Transfer only from UPI A/C</b></font><br><br>
-       <label for="transferACfrom"><font color="black"><b>From (A/c No.) :</b></font></label>
+   
+    <label for="transferACfrom"><font color="black"><b>From (A/c No.) :</b></font></label>
 <input type="text" id="transferACfrom" class="code" >
 
-   <label for="transferACname"><font color="black"><b>From :</b></font></label>
+    <label for="transferACname"><font color="black"><b>From :</b></font></label>
     <input type="text" id="transferACname" placeholder="From Name" class="code"  readonly/><br><br>
-       <label for="upiN"><font color="black"><b>UPI NO : </b></font></label>
+   
+     <label for="upiN"><font color="black"><b>UPI NO : </b></font></label>
     <input type="text" id="upiN" placeholder="UPI NUMBER" class="code"  readonly/>
-        <label for="signN"><font color="black"><b>Signed till :</b></font></label>
+    
+     <label for="signN"><font color="black"><b>Signed till :</b></font></label>
     <input type="text" id="signN" placeholder="validity" class="code"  readonly/><BR><br>
     
-  <font color="blue"><b>* Money Transfer to UPI, NON-UPI,Any A/C</b></font><br><br>
+    <font color="blue"><b>* Money Transfer to UPI, NON-UPI,Any A/C</b></font><br><br>
     
-  <label for="transferACto"><font color="black"><b>To (A/c No.) :</b></font></label>
+      <label for="transferACto"><font color="black"><b>To (A/c No.) :</b></font></label>
     <input type="text" id="transferACto" class="code">
     
- <label for="transferACtoName"><font color="black"><b>To  :</b></font></label>
+    <label for="transferACtoName"><font color="black"><b>To  :</b></font></label>
     <input type="text" placeholder="To Name" id="transferACtoName" class="code"  readonly/><br><BR>
     
-   <label for="transferACbalance"><font color="black"><b> Amount :</b></font></label>
+    <label for="transferACbalance"><font color="black"><b> Amount :</b></font></label>
     <input type="number" id="transferACbalance" class="code"><br><br>
     
-  <center><input type="button" value="Transfer" class="sub" onclick="transferACMd()">
+    <center><input type="button" value="Transfer" class="sub" onclick="transferACMd()">
 </center>
 <br><br>
 </div>
@@ -446,32 +480,40 @@ background-color: white;
 <div id="REGEX" style="display:none;">
     <!-- knowyourAC-->
     <CENTER ><H4><B> EXAM REGISTRATION</B></H4></CENTER>
+
     <font color="black"></font>
     <label for="regNoreg"><font color="black"><b>Reg./EC No :</b></font></label>
     <input type="text" id="regNoreg" class="code">
     
     
-   <label for="account"><font color="black"><b>A/C No:</b></font></label>
+    <label for="account"><font color="black"><b>A/C No:</b></font></label>
     <input type="text" id="account" placeholder="account number" class="code"  /><br><BR>
     
     
     
-  <label for="name"><font color="black"><b>Name:</b></font></label>
+    <label for="name"><font color="black"><b>Name:</b></font></label>
     <input type="text" id="name" placeholder="Name" class="code" readonly />
+    
     <label for="date"><font color="black"><b>Date :</b></font></label>
     <input type="date" id="date" class="code"><br><BR>
-        <label for="amount"><font color="black"><b>Fees(Swipe dr)  :</b></font></label>
+    
+  
+  
+    <label for="amount"><font color="black"><b>Fees(Swipe dr)  :</b></font></label>
     <input type="text" placeholder="INR" id="amount" class="code"  /><br><BR>
-        <H5> <B> *FILL AFTER RESULT....  </B></H5>
+    
+    <H5> <B> *FILL AFTER RESULT....  </B></H5>
+    
     <label for="PRICEAMOUNT"><font color="black"><b>Price Amount :</b></font></label>
     <input type="text" placeholder="price" id="PRICEAMOUNT" class="code"  />
-   <label for="TRXID"><font color="black"><b>TRX ID :</b></font></label>
+    
+    <label for="TRXID"><font color="black"><b>TRX ID :</b></font></label>
     <input type="text" placeholder="" id="TRXID" class="code"  /><br>
     
-<label for="RESULT"><font color="black"><b>Result (in M.O.)  :</b></font></label>
+    <label for="RESULT"><font color="black"><b>Result (in M.O.)  :</b></font></label>
     <input type="number" placeholder="" id="RESULT" class="code"  /><br><BR>
     
-   <center><input type="button" value="Register" class="sub" onclick="submitreg()">
+    <center><input type="button" value="Register" class="sub" onclick="submitreg()">
 </center>
 <br><br>
 </div>
@@ -486,14 +528,15 @@ background-color: white;
 
 <div id="find" style="display:none;">
           <center>  <u><h4> <font color="blue"> CHECK REGISTRATION STATUS</font></hr></u></center><br><br>
-        <label for="regNoSearch"><font color="black"><b>Reg./EC No :</b></font></label>
+        
+    <label for="regNoSearch"><font color="black"><b>Reg./EC No :</b></font></label>
     <input type="text" id="regNoSearch" class="code"><br>
     
     
   <br>  
    
     
-   <center><input type="button" value="proceed" class="sub" onclick="findreg()">
+    <center><input type="button" value="proceed" class="sub" onclick="findreg()">
 </center>
 <br><br>
 
@@ -526,22 +569,25 @@ background-color: white;
     <!-- knowyourAC-->
     <CENTER ><u><H4><B> APPLICATION </B></H4></u></CENTER>
 
- <font color="black"></font>
+    <font color="black"></font>
     <label for="regNoreg1"><font color="black"><b>APPLICATION No :</b></font></label>
     <input type="text" id="regNoreg1" class="code"><br><br>
     
     
-  <label for="account1"><font color="black"><b>A/C No:</b></font></label>
-    <input type="text" id="account1" placeholder="account number" class="code"  />    
+    <label for="account1"><font color="black"><b>A/C No:</b></font></label>
+    <input type="text" id="account1" placeholder="account number" class="code"  />
+    
+    
+    
     <label for="name1"><font color="black"><b>Name:</b></font></label>
     <input type="text" id="name1" placeholder="Name" class="code" readonly /><br><br>
     
-  <label for="date1"><font color="black"><b>Date :</b></font></label>
+    <label for="date1"><font color="black"><b>Date :</b></font></label>
     <input type="date" id="date1" class="code">
     
   
   
-  <label for="amount1"><font color="black"><b>APPLY FOR  :</b></font></label>
+    <label for="amount1"><font color="black"><b>APPLY FOR  :</b></font></label>
     <select id="amount1" class="code">
       <option value="APPLY SIGNED">APPLY SIGNED</option>
             
@@ -551,7 +597,7 @@ background-color: white;
 
 <option value="BLOCK/CLOSE UPI(OAPS)">BLOCK/CLOSE UPI(OAPS)</option>
 
-   <option value="APPLY UPI(OAPS)">APPLY UPI(OAPS)</option>
+        <option value="APPLY UPI(OAPS)">APPLY UPI(OAPS)</option>
                   <option value="ENABLE SMS ALERTS">ENABLE SMS ALERTS</option>
         <option value="DISABLE SMS ALERTS">DISABLE SMS ALERTS</option>
         <option value="UPDATE PERSONAL DETAILS">UPDATE PERSONAL DETAILS</option>
@@ -560,31 +606,34 @@ background-color: white;
    <option value="Account Convert(BSBD)TO(SB)">Account Convert(BSBD)TO(SB)</option> 
         <option value="CLOSE A/C">CLOSE A/C</option>
         
-  </select><br><br>
+        </select><br><br>
     
     
-  <label for="PRICEAMOUNT1"><font color="black"><b>Fees(Swipe dr):</b></font></label>
+    
+    <label for="PRICEAMOUNT1"><font color="black"><b>Fees(Swipe dr):</b></font></label>
     <input type="text" placeholder="INR" id="PRICEAMOUNT1" class="code"  />
    
         
         
         
     
- <label for="TRXID1"><font color="black"><b>PAYMENT STATUS :</b></font></label>
+    <label for="TRXID1"><font color="black"><b>PAYMENT STATUS :</b></font></label>
     <select id="TRXID1" class="code">
             <option value="Pending">Pending</option>
             <option value="Ok">Ok</option>
             <option value="Declined">Declined</option>
             
-  </select>
+        </select>
     
-  <label for="RESULT1"><font color="black"><b>STATUS  :</b></font></label>
+    <label for="RESULT1"><font color="black"><b>STATUS  :</b></font></label>
     <select id="RESULT1" class="code">
             <option value="Pending">Pending</option>
             <option value="Ok">Ok</option>
             <option value="Declined">Declined</option>
             
-  </select><br><br>  
+        </select><br><br>
+
+    
     <center><input type="button" value="APPLY" class="sub" onclick="APL()">
 </center>
 <br><br><hr>
@@ -595,14 +644,14 @@ background-color: white;
      <center>  <u><h4> <font color="blue"> CHECK APPLICATION STATUS</font></hr></u></center><br><br>
         
         
-  <label for="regNoSearch1"><font color="black"><b>APPLICATION NUMBER :</b></font></label>
- <input type="text" id="regNoSearch1" class="code"><br>
+    <label for="regNoSearch1"><font color="black"><b>APPLICATION NUMBER :</b></font></label>
+    <input type="text" id="regNoSearch1" class="code"><br>
     
     
   <br>  
    
     
-   <center><input type="button" value="proceed" class="sub" onclick="CHECKSTATUS()">
+    <center><input type="button" value="proceed" class="sub" onclick="CHECKSTATUS()">
 </center>
 <br><br>
 
@@ -635,19 +684,22 @@ background-color: white;
 
    <h3> <font color="blue">  <b><center><u>STATEMENT OF ACCOUNT</center></u></b></font></h3>
    
-  <label for="ac"><font color="black"><b>A/c No.:</b></font></label>
+  
+   
+    <label for="ac"><font color="black"><b>A/c No.:</b></font></label>
 <input type="text" id="ac" class="code" >
 
-  <label for="ACname"><font color="black"><b>Name:</b></font></label>
+    <label for="ACname"><font color="black"><b>Name:</b></font></label>
     <input type="text" id="ACname" placeholder=" A/C holder" class="code" /><br><br>
    
-<label for="fromdate"><font color="black"><b>From Date:</b></font></label>
+      <label for="fromdate"><font color="black"><b>From Date:</b></font></label>
     <input type="date" id="fromdate" class="code">
-        <label for="todate"><font color="black"><b>To Date :</b></font></label>
+    
+    <label for="todate"><font color="black"><b>To Date :</b></font></label>
     <input type="date" id="todate" class="code" /><br><BR>
     
     
- <center><input type="button" value="Download Statement" class="sub" onclick="Mystatement()">
+    <center><input type="button" value="Download Statement" class="sub" onclick="Mystatement()">
 </center>
 <br><br>
 </div>
@@ -677,18 +729,24 @@ background-color: white;
         </center>
         <br>
 
-  <center>
+        <center>
             <font color="red">*</font>  
             <label for="password"><font color="red"><b>ENTER PASSWORD:</b></font></label>
             <input type="password" id="password" class="pass" required>
         </center><br><br>
 
-<center>
+        <center>
             <input type="button" value="Search Data" class="sub" onclick="searchStudent()" onclick="showSpinner()">
             
-   <input type="button" value="Save Changes" id="saveButton" class="sub" style="display:none;" onclick="saveEditedStudent()">      
+            <input type="button" value="Save Changes" id="saveButton" class="sub" style="display:none;" onclick="saveEditedStudent()">
+            
+            
       <input type="button" value="Reset Password" class="sub" onclick="resetPassword()">      
-      </center>
+            
+            
+            
+            
+        </center>
     </form>
 </div>
 
